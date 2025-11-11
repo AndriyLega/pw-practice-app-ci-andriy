@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","3172","paramentrized method test @smoke","chromium","2025-11-11","passed","2025-11-11","","e2e\usePageObject.spec.ts","",""
+"","2359","datepicker","chromium","2025-11-11","passed","2025-11-11","","e2e\usePageObject.spec.ts","",""
+"","3810","navagate to form page @smoke @regression","chromium","2025-11-11","passed","2025-11-11","","e2e\usePageObject.spec.ts","",""
