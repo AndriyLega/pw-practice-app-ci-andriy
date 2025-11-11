@@ -37,6 +37,17 @@ export default defineConfig<TestOptions>({
   //reporter: 'html',
   //reporter: 'list',
   reporter: [
+    process.env.CI ? ["dot"] : ["list"],
+    [
+      "@argos-ci/playwright/reporter",
+      {
+        // Upload to Argos on CI only.
+        uploadToArgos: !!process.env.CI,
+
+        // // Set your Argos token (required if not using GitHub Actions).
+        // token: "<YOUR-ARGOS-TOKEN>",
+      },
+    ],
     ['json', { outputFile: 'test-results/playwright-report.json' }],
     ['junit', { outputFile: 'test-results/playwright-report.xml' }],
     //['allure-playwright'],
