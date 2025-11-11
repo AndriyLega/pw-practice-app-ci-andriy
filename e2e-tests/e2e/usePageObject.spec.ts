@@ -39,3 +39,9 @@ test('datepicker', async ({ page }) => {
     await pageManager.onDatePickerPage().selectCommonDatepickerDateFromToday(207);
     await pageManager.onDatePickerPage().selectDatepickerWithRangeFromToday(109, 110);
 });
+
+test.only('testing with argos ci', async ({ page }) => {
+    const pageManager = new PageManager(page);
+    await pageManager.navigateTo().navigateToFormLayoutsPage();
+    await pageManager.navigateTo().navigateToDatepickerPage();
+});
